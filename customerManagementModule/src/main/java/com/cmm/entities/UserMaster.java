@@ -43,6 +43,8 @@ public class UserMaster  implements UserDetails {
     @Cascade(CascadeType.ALL)
     private List<VehicleMaster> vehicleMasterList;
 
+    @OneToMany
+    private List<ServiceRequest> serviceRequests;
 
     public String getUserFullName(){
         return this.getFirstName() + " " +this.getLastName();
@@ -77,4 +79,5 @@ public class UserMaster  implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
+
 }

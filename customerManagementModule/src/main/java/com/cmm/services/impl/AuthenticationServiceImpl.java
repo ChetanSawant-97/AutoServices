@@ -36,7 +36,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         JwtResponseDTO jwtResponseDTO = JwtResponseDTO.builder()
                 .userName(user.getEmail())
                 .userFullName(user.getUserFullName())
-                .accessToken(jwt).build();
+                .accessToken(jwt).userRole(user.getUserRole().getRole()).build();
         return jwtResponseDTO;
     }
 }

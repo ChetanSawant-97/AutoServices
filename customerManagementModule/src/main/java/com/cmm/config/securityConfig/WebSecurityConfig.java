@@ -38,6 +38,7 @@ public class WebSecurityConfig {
                         .permitAll()
                         .requestMatchers("/api/v1/admin").authenticated()
                         .requestMatchers("/api/v1/user").authenticated()
+                        .requestMatchers("/api/v1/service").authenticated()
                         .anyRequest().authenticated())
                 .sessionManagement(manager -> manager.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authenticationProvider(authenticationProvider()).addFilterBefore(
