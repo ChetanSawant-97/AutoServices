@@ -44,6 +44,7 @@ public class UserServicesImpl implements UserService {
         try {
             UserMaster userMaster = userMasterRepo.findByEmail(username);
             userProfileDetails = UserProfileDetails.builder()
+                    .userId(userMaster.getCustomerId())
                     .firstName(userMaster.getFirstName())
                     .lastName(userMaster.getLastName())
                     .addressList(userMaster.getAddressMaster())

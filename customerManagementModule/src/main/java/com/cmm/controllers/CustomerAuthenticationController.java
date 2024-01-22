@@ -60,7 +60,7 @@ public class CustomerAuthenticationController {
 
     @PostMapping("/login")
     public JwtResponseDTO AuthenticateAndGetToken(@RequestBody AuthRequestDTO authRequestDTO){
-        JwtResponseDTO jwtResponseDTO = new JwtResponseDTO();
+       JwtResponseDTO jwtResponseDTO = new JwtResponseDTO();
         jwtResponseDTO = authenticationService.signinUser(authRequestDTO);
         return jwtResponseDTO;
     }

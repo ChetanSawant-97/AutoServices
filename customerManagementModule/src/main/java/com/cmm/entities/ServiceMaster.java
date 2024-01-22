@@ -22,4 +22,5 @@ public class ServiceMaster {
     private String serviceName;
     private String description;
     private String serviceRate;
+    private String expectedTime;
 }

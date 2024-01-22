@@ -13,6 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserProfileDetails {
+    private Long userId;
     private String firstName;
     private String lastName;
     private String userName;
